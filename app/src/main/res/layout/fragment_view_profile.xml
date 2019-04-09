@@ -1,0 +1,72 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.ViewProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AA6666"
+        android:id="@+id/movie_bar"
+        android:layout_below="@+id/toolbar"
+        android:padding="1dp">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:id="@+id/movie_cover_profile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/movie_genre_profile"
+            android:text="Movie Genre"
+            android:textSize="13sp"
+            android:padding="7dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/movie_rate_profile"
+            android:text="Movie rate"
+            android:layout_toRightOf="@+id/movie_genre_profile"
+            android:textSize="13sp"
+            android:padding="7dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:id="@+id/movie_description_profile"
+            android:text="Movie Description"
+            android:layout_toLeftOf="@id/movie_cover_profile"
+            android:layout_below="@+id/movie_rate_profile"
+            android:textSize="13sp"
+            android:padding="3dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/movie_bar"
+        android:background="#78C2D8">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</RelativeLayout>
